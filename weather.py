@@ -28,7 +28,7 @@ def error(bot, update, error):
     """Log Errors caused by Updates."""
     logger.warning('Update "%s" caused error "%s"', update, error)
 
-def pogoda(bot, update, args):
+def weather(bot, update, args):
     """Define weather at certain location"""
     owm = pyowm.OWM('YOUR-API-OPENWEATHERMAP-KEY')
     text_location = "".join(str(x) for x in args)
@@ -61,7 +61,7 @@ def main():
     # on different commands - answer in Telegram
     dp.add_handler(CommandHandler("start", start))
     dp.add_handler(CommandHandler("help", help))
-    dp.add_handler(CommandHandler("pogoda", pogoda, pass_args=True))
+    dp.add_handler(CommandHandler("weather", weather, pass_args=True))
 
     # log all errors
     dp.add_error_handler(error)
