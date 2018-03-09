@@ -22,7 +22,7 @@ def start(bot, update):
 
 def help(bot, update):
     """Send a message when the command /help is issued."""
-    update.message.reply_text('Just type, for example, /pogoda Moscow')
+    update.message.reply_text('Just type, for example, /weather Moscow')
 
 def error(bot, update, error):
     """Log Errors caused by Updates."""
