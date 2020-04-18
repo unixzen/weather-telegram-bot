@@ -43,12 +43,9 @@ def weather(bot, update, args):
     text_temp = str(convert_temp)
     text_wind = str(convert_wind)
     text_humidity = str(convert_humidity)
-    update.message.reply_text("Temperature, celsius:")
-    update.message.reply_text(text_temp)
-    update.message.reply_text("Wind speed, m/s:")
-    update.message.reply_text(text_wind)
-    update.message.reply_text("Humidity, %:")
-    update.message.reply_text(text_humidity) 
+    update.message.reply_text("Temperature, celsius: {}".format(text_temp))
+    update.message.reply_text("Wind speed, m/s: {}".format(text_wind))
+    update.message.reply_text("Humidity, %: {}".format(text_humidity))
 
 def main():
     """Start the bot."""
